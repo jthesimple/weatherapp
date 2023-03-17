@@ -1,6 +1,6 @@
 
 
-
+const key = '';
 let place = 'San Diego';
 
 
@@ -14,11 +14,11 @@ async function directGeo(){
     return coordinates;
 };
 
-async function hitAPI(){
-    let response = await fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${x}&lon=${y}&exclude={alerts}&appid=${key}`);
+async function hitAPI(array){
+    let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${array[0]}&lon=${array[1]}&appid=${key}`);
     let answer = await response.json();
     console.log(answer);
 
 };
 
-hitAPI(directGeo());
+hitAPI(directGeo);
