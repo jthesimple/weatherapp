@@ -1,6 +1,6 @@
 
 
-const key = 'e558da8b51128d17caf06f9526d53b74';
+const key = '';
 let place = 'San Diego';
 
 async function getCoordinates(){
